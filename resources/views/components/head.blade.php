@@ -51,7 +51,7 @@
                 <li><a href="#">Thi Trắc nghiệm</a>
                     <ul>
                         <li><a href="#">Làm Bài Thi</a></li>
-                        <li><a href="#">Xem Lại Lịch Sử Làm Bài_</a></li>
+                        <li><a href="#">Xem Lại Lịch Sử Làm Bài</a></li>
                     </ul>
                 </li>
                 <li><a href="#" title="Liện hệ">Liên hệ</a></li>

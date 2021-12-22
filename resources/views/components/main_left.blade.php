@@ -1,5 +1,5 @@
-<div class="column side">
-    <div id="mainnav">
+ <div class="column side">
+     <!--<div id="mainnav">
         <ul>
             <li class="thefirst"><a href="#">Chuyen muc</a>
                 <ul class="sub-menu">
@@ -37,5 +37,8 @@
             <li><a href="#">Hoi dap</a></li>
             <li><a href="#">Bat dau</a></li>
         </ul>
-    </div>
-</div>
+    </div>-->
+
+
+
+ </div>
