@@ -224,11 +224,26 @@ nav>ul li>ul li>ul {
 }
 
 .answer {
-    width: 15%;
+    width: 18%;
     padding: 5px;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 5px;
     float: left;
     margin-top: 5px;
     margin-right: 5px;
+}
+
+.moveto {
+    width: 0px;
+    border: 0;
+}
+
+.btn_header {
+    float: right;
+    vertical-align: inherit;
+    border: 1px solid rgb(255, 255, 255);
+    margin: 5px;
+    padding: 5px;
+    color: #ccc;
+    background: #484848;
 }
