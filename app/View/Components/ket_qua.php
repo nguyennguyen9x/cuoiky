@@ -4,9 +4,8 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class trang_chu extends Component
+class ket_qua extends Component
 {
-    public $questions;
     /**
      * Create a new component instance.
      *
@@ -14,8 +13,9 @@ class trang_chu extends Component
      */
     public function __construct()
     {
-        
+        //
     }
+
     /**
      * Get the view / contents that represent the component.
      *
@@ -23,6 +23,6 @@ class trang_chu extends Component
      */
     public function render()
     {
-        return view('components.trang_chu');
+        return view('components.ket_qua');
     }
 }

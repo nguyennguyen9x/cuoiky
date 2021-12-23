@@ -10,16 +10,18 @@ use Illuminate\Support\Facades\Route;
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
-|
+|components  web
 */
 
-Route::get('/', function () {
-    return view('web/trang_chu');
-})->name('home');
-Route::prefix('web')->group(function(){
+Route::prefix('/')->group(function(){
+    Route::get('/' , 'handle@load_home')->name('home');
     Route::get('bai_thi', function () { return view('web/bai_thi');})->name('bai_thi');
-    Route::get('khoa_hoc', function () {return view('web/khoa_hoc');})->name('khoa_hoc');
+    Route::get('khoa_hoc', 'handle@load_khoa_hoc')->name('khoa_hoc');
+    Route::get('register', function () { return view('components/register');})->name('show_register');
+    Route::get('login', function () { return view('components/login');})->name('show_login');
     Route::post('ket_qua', 'handle@nop_bai')->name('ket_qua');
+    Route::post('register', 'handle@register')->name('register');
+    Route::post('login', 'handle@login')->name('login');
 });
 // Route::get('/cdtn', function () {
 //     return view('cdtn');

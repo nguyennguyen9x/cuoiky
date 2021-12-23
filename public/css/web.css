@@ -122,6 +122,7 @@ nav>ul li>ul li>ul {
 }
 
 .main {
+    min-height: 350px;
     background: #fff;
 }
 
@@ -246,4 +247,9 @@ nav>ul li>ul li>ul {
     padding: 5px;
     color: #ccc;
     background: #484848;
+}
+
+.btn_header a {
+    color: #f1f2f3;
+    text-decoration: none;
 }

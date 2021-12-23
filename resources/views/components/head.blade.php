@@ -15,8 +15,8 @@
                 <img
                     src="https://scontent-sin6-3.xx.fbcdn.net/v/t39.30808-6/241042254_4686263994719451_6540534603638629438_n.png.jpg?_nc_cat=106&_nc_rgb565=1&ccb=1-5&_nc_sid=8631f5&_nc_ohc=XN3ury3hWEsAX_rVyGZ&_nc_ht=scontent-sin6-3.xx&oh=00_AT9QQwrhAlv_WNt9yQJcZsJngb9R_gNdl2CvyINuSHjohA&oe=61C54E25">
             </div>
-            <button class="btn_header">Đăng Ký</button>
-            <button class="btn_header">Đăng Nhập</button>
+            <button class="btn_header"><a href="{{ route('show_register') }}">Đăng Ký</a></button>
+            <button class="btn_header"><a href="{{ route('show_login') }}">Đăng Nhập</button>
         </header>
         <nav>
             <ul>

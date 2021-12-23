@@ -1,12 +1,11 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\admin;
 
 use Illuminate\View\Component;
 
-class trang_chu extends Component
+class index extends Component
 {
-    public $questions;
     /**
      * Create a new component instance.
      *
@@ -14,8 +13,9 @@ class trang_chu extends Component
      */
     public function __construct()
     {
-        
+        //
     }
+
     /**
      * Get the view / contents that represent the component.
      *
@@ -23,6 +23,6 @@ class trang_chu extends Component
      */
     public function render()
     {
-        return view('components.trang_chu');
+        return view('components.admin.index');
     }
 }

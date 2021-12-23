@@ -15,7 +15,7 @@ class question extends Component
      *
      * @return void
      */
-    public function __construct($index ="" ,$question = "load question error",$answer = [])
+    public function __construct($index = null ,$question = "load question error",$answer = [])
     {
         $this->index=$index;
         $this->question=$question;
