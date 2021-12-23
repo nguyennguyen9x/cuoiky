@@ -24,17 +24,4 @@ class handle extends Controller
             // dd("<x-question :index='$index' :question='$data_question->QUESTION' :answer='$arr_answer'></x-question>");
         }
     }
-    public function nop_bai(request $req){
-        // $diem = $req->all();
-        // return view('web.ket_qua',['diem'=>$diem]);
-        $diem=0;
-        for ($i=0; $i <= 20 ; $i++) { 
-            $answer = DB::table('asw')->where('ID_AWS', $req[$i])->get();
-            foreach ($answer as $value) {
-                if($value->STATUS==1)
-                    $diem++;
-            }
-        }
-        return view('web.ket_qua',['diem'=>$diem]);
-    }
 }

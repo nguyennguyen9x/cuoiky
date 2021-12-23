@@ -2,30 +2,27 @@
 <div>
     <nav class="main">
         <x-main_left></x-main_left>
-        <form action="{{ route('ket_qua') }}" method="post">
-            @csrf
-            <div class="column middle">
-                <h2>Đề bài thi thử :</h2>
+        <div class="column middle">
+            <h2>Đề bài thi thử</h2>
+            @php
+            $question = DB::table('question')->where('ID_TP', '<',7)->inRandomOrder()->limit(20)->get();
+                $index=0;
+                foreach ($question as $data_question){
+                $answer = DB::table('asw')->where('ID_QU', $data_question->ID_QU)->get();
+                $arr_answer =[];
+                foreach ($answer as $data_answer){
+                array_push($arr_answer, $data_answer);
+                }
+                $index++;
+                @endphp
+                <x-question :index='$index' :question='$data_question->QUESTION' :answer='$arr_answer'>
+                </x-question>
                 @php
-                $question = DB::table('question')->where('ID_TP', '<',7)->inRandomOrder()->limit(20)->get();
-                    $index=0;
-                    foreach ($question as $data_question){
-                    $answer = DB::table('asw')->where('ID_QU', $data_question->ID_QU)->get();
-                    $arr_answer =[];
-                    foreach ($answer as $data_answer){
-                    array_push($arr_answer, $data_answer);
-                    }
-                    $index++;
-                    @endphp
-                    <x-question :index='$index' :question='$data_question->QUESTION' :answer='$arr_answer'>
-                    </x-question>
-                    @php
-                    }
-                    @endphp
+                }
+                @endphp
 
-                    <button type="submit" class="btn_header">Nộp bài</button>
-            </div>
-        </form>
+                <button class="btn_header">Nộp bài</button>
+        </div>
         <div class="column side">
             <h2>Side</h2>
             @php
@@ -42,7 +39,6 @@
             }
             @endphp
         </div>
-
         <!-- <x-main_right></x-main_right> -->
     </nav>
 

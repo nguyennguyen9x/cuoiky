@@ -14,12 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('web/trang_chu');
+    return view('components/trang_chu');
 })->name('home');
 Route::prefix('web')->group(function(){
     Route::get('bai_thi', function () { return view('web/bai_thi');})->name('bai_thi');
     Route::get('khoa_hoc', function () {return view('web/khoa_hoc');})->name('khoa_hoc');
-    Route::post('ket_qua', 'handle@nop_bai')->name('ket_qua');
 });
 // Route::get('/cdtn', function () {
 //     return view('cdtn');
