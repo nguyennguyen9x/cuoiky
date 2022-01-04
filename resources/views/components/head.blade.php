@@ -15,8 +15,12 @@
                 <img
                     src="https://scontent-sin6-3.xx.fbcdn.net/v/t39.30808-6/241042254_4686263994719451_6540534603638629438_n.png.jpg?_nc_cat=106&_nc_rgb565=1&ccb=1-5&_nc_sid=8631f5&_nc_ohc=XN3ury3hWEsAX_rVyGZ&_nc_ht=scontent-sin6-3.xx&oh=00_AT9QQwrhAlv_WNt9yQJcZsJngb9R_gNdl2CvyINuSHjohA&oe=61C54E25">
             </div>
+            @if(Session::has('islogin') && session('islogin'))
+            <button class="btn_header"><a href="{{ route('logout') }}">Đăng xuất</button>
+            @else
             <button class="btn_header"><a href="{{ route('show_register') }}">Đăng Ký</a></button>
             <button class="btn_header"><a href="{{ route('show_login') }}">Đăng Nhập</button>
+            @endif
         </header>
         <nav>
             <ul>
@@ -52,20 +56,22 @@
                 </li>
                 <li><a href="#">Thi Trắc nghiệm</a>
                     <ul>
-                        <li><a href="#">Làm Bài Thi</a>
+                        <li><a href="{{ route('thi_trac_nghiem',['level'=>1]) }}">Làm Bài Thi</a>
+                            @if(Session::has('islogin') && session('islogin'))
                             <ul>
                                 <li>
-                                    <a href="#">Excel</a>
+                                    <a href="{{ route('thi_trac_nghiem',['level'=>1]) }}">Excel</a>
                                 </li>
                                 <li>
-                                    <a href="#">Sử Dụng Máy Tính Cơ Bản</a>
+                                    <a href="{{ route('thi_trac_nghiem',['level'=>2]) }}">Sử Dụng Máy Tính Cơ Bản</a>
                                 </li>
                                 <li>
-                                    <a href="#">HTML-CSS</a>
+                                    <a href="{{ route('thi_trac_nghiem',['level'=>3]) }}">HTML-CSS</a>
                                 </li>
                             </ul>
+
                         </li>
-                        <li><a href="#">Xem Lại Lịch Sử Làm Bài</a></li>
+                        <li><a href="{{ route('history') }}">Xem Lại Lịch Sử Làm Bài</a>@endif</li>
                     </ul>
                 </li>
                 <li><a href="#" title="Liện hệ">Liên hệ</a></li>

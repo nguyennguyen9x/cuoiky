@@ -142,6 +142,14 @@ nav>ul li>ul li>ul {
     width: 50%;
 }
 
+.form {
+    text-align: center;
+}
+
+.notice {
+    color: red;
+}
+
 #mainnav ul {
     display: block;
     /* background: #3B5998; */
